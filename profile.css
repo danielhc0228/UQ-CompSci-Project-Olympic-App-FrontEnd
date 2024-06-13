@@ -1,0 +1,70 @@
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+  
+  button {
+    background-color:#0085C7;
+    color: white;
+    font-size: 15px;
+    padding: 14px 2px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 25%;
+    border-radius: 10px;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+
+  a:link, a:visited {
+    color: #818181;
+    text-decoration: none;
+  }
+
+  .center #signlog {
+    color:blue;
+  }
+  .center a {
+    color:white;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  .imgcontainer {
+    text-align: center;
+    margin: 170px 0 10px 0;
+  }
+  
+  img.profile {
+    width: 20%;
+    border-radius: 50%;
+  }
+  
+  .container {
+    padding: 16px;
+  }
+  
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+
+  select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }

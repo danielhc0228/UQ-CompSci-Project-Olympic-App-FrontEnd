@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="profile.css">
+    
+    <title>Settings Page</title>
+</head>
+<body>
+    <header class="banner top-banner">
+        <!-- Banner content here -->
+        <img src="img/olympics.png" style="width:70px;height:70px;">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <img id="profileimg" src="/img/profile.png" alt="#">
+            <h1 id="userid">UserID</h1>
+            <div class="sideimg">
+                <img id="btn" src="img/profile.png" alt="#"><a href="profile.html" id="profilenav">Profile</a>
+            </div>
+            <div class="sideimg">
+                <img id="btn" src="img/settings.png" alt="#"><a href="settings.html" id="settingsnav">Settings</a>
+            </div>
+            <div class="sideimg">
+                <img id="btn" src="img/information.png" alt="#"><a href="faq.html" id="faqnav">FAQ</a>
+            </div>
+            <!-- <a href="javascript:void(0)" class="subnav" onclick="toggleSubNav()">#</a>
+            <div id="subNavContent" class="subnav-content">
+                <a href="#">#</a>
+                <a href="#">#</a>
+                <a href="#">#</a>
+            </div> -->
+        </div>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="topleft">&#9776;</span>
+    </header>
+    <!-- Header here -->
+
+    <div class="imgcontainer">
+        <img src="img/profile.png" alt="Profile" class="profile">
+      </div>
+      
+      <div class="container">
+      <label for="language"><b>Language</b></label>
+        <select name="language" id="languageSelector">
+            <option value="en">English</option>
+            <option value="zh">中国語</option>
+            <option value="ja">日本語</option>
+            <option value="ko">한국어</option>
+        </select>
+        <br><br>
+
+        <label for="country"><b>Country / Region</b></label>
+        <select name="country" id="country">
+            <option value="aus">Australia</option>
+            <option value="cn">China</option>
+            <option value="japan">Japan</option>
+            <option value="korea">Korea</option>
+        </select>
+        <br><br>
+
+        <label for="preferences"><b>Sports Preferences</b></label>
+        <select name="preferences" id="preferences">
+            <option value="3x3basketball">3x3 Basketball</option>
+            <option value="archery">Archery</option>
+            <option value="agym">Artistic Gymnastics</option>
+            <option value="aswim">Artistic Swimming</option>
+            <option value="athletics">Athletics</option>
+            <option value="badminton">Badminton</option>
+            <option value="baseballsoftball">Baseball Softball</option>
+            <option value="basketball">Basketball</option>
+            <option value="beachvolleyball">Beach Volleyball</option>
+            <option value="boxing">Boxing</option>
+            <option value="canoeslalom">Canoe Slalom</option>
+            <option value="cyclingbmxfreestyle">Cycling BMX Freestyle</option>
+            <option value="cyclingbmxracing">Cycling BMX Racing</option>
+            <option value="cyclingmountainbike">Cycling Mountain Bike</option>
+            <option value="cyclingroad">Cycling Road</option>
+            <option value="cyclingtrack">Cycling Track</option>
+            <option value="diving">Diving</option>
+            <option value="equestrian">Equestrian</option>
+            <option value="fencing">Fencing</option>
+            <option value="football">Football</option>
+            <option value="golf">Golf</option>
+            <option value="handball">Handball</option>
+            <option value="hockey">Hockey</option>
+            <option value="judo">Judo</option>
+            <option value="karate">Karate</option>
+            <option value="marathonswimming">Marathon Swimming</option>
+            <option value="modernpentathlon">Modern Pentathlon</option>
+            <option value="rhythmicgymnastics">Rhythmic Gymnastics</option>
+            <option value="rowing">Rowing</option>
+            <option value="rugby">Rugby</option>
+            <option value="sailing">Sailing</option>
+            <option value="shooting">Shooting</option>
+            <option value="skateboarding">Skateboarding</option>
+            <option value="sportclimbing">Sport Climbing</option>
+            <option value="surfing">Surfing</option>
+            <option value="swimming">Swimming</option>
+            <option value="tabletennis">Table Tennis</option>
+            <option value="taekwondo">Taekwondo</option>
+            <option value="tennis">Tennis</option>
+            <option value="trampoline">Trampoline</option>
+            <option value="triathlon">Triathlon</option>
+            <option value="volleyball">Volleyball</option>
+            <option value="waterpolo">Water Polo</option>
+            <option value="weightlifting">Weightlifting</option>
+            <option value="wrestling">Wrestling</option>
+        </select>
+        <br><br>
+
+        <label for="notifications"><b>Notifications</b></label>
+        <select name="notifications" id="notifications">
+            <option value="allow">Allow</option>
+            <option value="dontallow">Don't Allow</option>
+        </select>
+        <br><br>
+        <section></section>
+        <br><br>
+
+        </div>
+
+    <!-- Bottom banner content here -->
+    <footer class="banner bottom-banner">
+            <div></div>
+            <div class="circle one">
+                <a href="index.html"><img id="btn" src="img/home.png" alt="#"></a>
+            </div>
+            <div class="circle two">
+                <a href="schedule.html"><img id="btn" src="img/calendar.png" alt="#"></a>
+            </div>
+            <div class="circle thr">
+                <a href="profile.html"><img id="btn" src="img/profile.png" alt="#"></a>
+            </div>
+            <div class="circle four">
+                <a href="tips.html"><img id="btn" src="img/light-bulb.png" alt="#"></a>
+            </div>
+            <div class="circle fiv">
+                <a href="translation_page.html"><img id="btn" src="img/language.png" alt="#"></a>
+            </div>
+            <div></div>
+        
+    </footer>
+    <script src="features.js"></script>
+    <script src="settings.js"></script>
+    <script src="data_features.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="eventCardStyle.css">
+    
+    <title>FAQ Page</title>
+</head>
+<body>
+    <header class="banner top-banner">
+        <!-- Banner content here -->
+        <img src="img/olympics.png" style="width:70px;height:70px;">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <img id="profileimg" src="/img/profile.png" alt="#">
+            <h1 id="userid">UserID</h1>
+            <div class="sideimg">
+                <img id="btn" src="img/profile.png" alt="#"><a href="profile.html" id="profilenav">Profile</a>
+            </div>
+            <div class="sideimg">
+                <img id="btn" src="img/settings.png" alt="#"><a href="settings.html" id="settingsnav">Settings</a>
+            </div>
+            <div class="sideimg">
+                <img id="btn" src="img/information.png" alt="#"><a href="faq.html" id="faqnav">FAQ</a>
+            </div>
+            <!-- <a href="javascript:void(0)" class="subnav" onclick="toggleSubNav()">#</a>
+            <div id="subNavContent" class="subnav-content">
+                <a href="#">#</a>
+                <a href="#">#</a>
+                <a href="#">#</a>
+            </div> -->
+          </div>
+          <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="topleft">&#9776;</span>
+    </header>
+
+    <main class="content">
+        <div class="body">
+            <select name="language" id="languageSelector" style="display: none;">
+                <option value="en">English</option>
+                <option value="zh">中国語</option>
+                <option value="ja">日本語</option>
+                <option value="ko">한국어</option>
+            </select>
+            <h1>FAQ</h1>
+            <section class="faq-container">
+                <div class="faq-one">
+                    <!-- faq question -->
+                    <h1 class="faq-page" id="faq1">What is this app?</h1>
+                    <!-- faq answer -->
+                    <div class="faq-body" id="faqb1">
+                        <p>This app helps tourists and guests to navigate and plan olympic games. 
+                            It also provides translation features.
+                        </p>
+                    </div>
+                </div>
+                <hr class="hr-line">
+                <div class="faq-two">
+                    <!-- faq question -->
+                    <h1 class="faq-page" id="faq2">How do you change the language preference?</h1>
+                    <!-- faq answer -->
+                    <div class="faq-body" id="faqb2">
+                        <p>Click &#9776; on the top-left corner -> Settings -> Language -> Choose your language.</p>
+                    </div>
+                </div>
+                <hr class="hr-line">
+                <div class="faq-three">
+                    <!-- faq question -->
+                    <h1 class="faq-page" id="faq3">How to use the translation feature?</h1>
+                    <!-- faq answer -->
+                    <div class="faq-body" id="faqb3">
+                        <p>Translation button -> Choose the language you want to change to -> 
+                            Type or click the mic in the keyboard to say what you want to translate. 
+                            -> Click translate button</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="banner bottom-banner">
+        <!-- Bottom banner content here -->
+            <div></div>
+            <!-- Home page button -->
+            <div class="circle one">
+                <a href="index.html"><img id="btn" src="img/home.png" alt="#"></a>
+            </div>
+            <!-- Search page button -->
+            <div class="circle two">
+                <a href="schedule.html"><img id="btn" src="img/calendar.png" alt="#"></a>
+            </div>
+            <!-- Profile page button -->
+            <div class="circle thr">
+                <a href="profile.html"><img id="btn" src="img/profile.png" alt="#"></a>
+            </div>
+            <!-- Light bulb page button -->
+            <div class="circle four">
+                <a href="tips.html"><img id="btn" src="img/light-bulb.png" alt="#"></a>
+            </div>
+            <!-- Translation page button -->
+            <div class="circle fiv">
+                <a href="translation_page.html"><img id="btn" src="img/language.png" alt="#"></a>
+            </div>
+            <div></div>
+        
+    </footer>
+    <script src="features.js"></script>
+    <script src="data_features.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="eventCardStyle.css">
+    
+    <title>Home Page</title>
+</head>
+<body>
+    <header class="banner top-banner">
+        <!-- Banner content here -->
+        <img src="img/olympics.png" style="width:70px;height:70px;">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <img id="profileimg" src="/img/profile.png" alt="#">
+            <h1 id="userid">UserID</h1>
+            <div class="sideimg">
+                <img id="btn" src="img/profile.png" alt="#"><a href="profile.html" id="profilenav">Profile</a>
+            </div>
+            <div class="sideimg">
+                <img id="btn" src="img/settings.png" alt="#"><a href="settings.html" id="settingsnav">Settings</a>
+            </div>
+            <div class="sideimg">
+                <img id="btn" src="img/information.png" alt="#"><a href="faq.html" id="faqnav">FAQ</a>
+            </div>
+            <!-- <a href="javascript:void(0)" class="subnav" onclick="toggleSubNav()">#</a>
+            <div id="subNavContent" class="subnav-content">
+                <a href="#">#</a>
+                <a href="#">#</a>
+                <a href="#">#</a>
+            </div> -->
+          </div>
+          <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="topleft">&#9776;</span>
+    </header>
+
+    <main class="content">
+        <div class="body">
+            <select name="language" id="languageSelector" style="display: none;">
+                <option value="en">English</option>
+                <option value="zh">中国語</option>
+                <option value="ja">日本語</option>
+                <option value="ko">한국어</option>
+            </select>
+            <h1 id="tips">Tips and Advice</h1>
+            <article>
+                <h2 id="tips1">Local Customs and Etiquette</h2>
+                <ul>
+                    <li id="tips1n1">Australians are generally friendly and easygoing.</li>
+                    <li id="tips1n2">It's customary to greet with a simple "G'day" or "Hello."</li>
+                    <li id="tips1n3">Tipping is not mandatory but is appreciated for good service (around 10% of the bill in restaurants).</li>
+                </ul>
+            </article>
+    
+            <article>
+                <h2 id="tips2">Food</h2>
+                <img src="images/food.jpg" id="tipsimg">
+                <ul>
+                    <li id="tips2n1">Try Australian cuisine, which includes dishes like Vegemite (a spread for bread), meat pies, lamington, kangaroo, and damper (a type of bread).</li>
+                    <li id="tips2n2">Don't miss the opportunity to experience a traditional Australian barbecue (barbie).</li>
+                    <li id="tips2n3">Australia also offers diverse international cuisine due to its multicultural population, so you can find a wide variety of food options.</li>
+                </ul>
+            </article>
+    
+            <article>
+                <h2 id="tips3">Wildlife and Nature</h2>
+                <img src="images/animal.jpg" id="tipsimg">
+                <ul>
+                    <li id="tips3n1">Australia is known for its unique wildlife. Be cautious around animals, as some can be dangerous. Follow safety guidelines, especially in national parks.</li>
+                    <li id="tips3n2">Do not feed or approach wild animals, as it can be harmful to both you and the animals.</li>
+                </ul>
+            </article>
+    
+            <article>
+                <h2 id="tips4">Transportation</h2>
+                <img src="images/transport.jpg" id="tipsimg">
+                <ul>
+                    <li id="tips4n1">Brisbane has a well-connected public transport system, including buses, trains, and ferries. Consider purchasing a "Go Card" for convenient access.</li>
+                    <li id="tips4n2">If you plan to rent a car, remember that Australians drive on the left side of the road.</li>
+                </ul>
+            </article>
+    
+            <article>
+                <h2 id="tips5">Emergency</h2>
+                <ul>
+                    <li id="tips5n1">Call 000 for police, fire, or medical assistance.</li>
+                </ul>
+            </article>
+    
+            <article>
+                <h2 id="tips6">Indigenous Culture</h2>
+                <img src="images/ind.jpg" id="tipsimg">
+                <ul>
+                    <li id="tips6n1">Learn about and respect Australia's Indigenous cultures and traditions. Consider visiting cultural centers or attending Indigenous events to gain a deeper understanding.</li>
+                </ul>
+            </article>
+            <div class="bottomtip" id="bottomtip">
+                <p>
+                    By following these tips and being respectful of local customs and cultures, 
+                    you can have a memorable and enjoyable visit to Australia during the 2032 Brisbane Olympics. 
+                    Enjoy the games and the beautiful Australian landscape!
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="banner bottom-banner">
+        <!-- Bottom banner content here -->
+            <div></div>
+            <!-- Home page button -->
+            <div class="circle one">
+                <a href="index.html"><img id="btn" src="img/home.png" alt="#"></a>
+            </div>
+            <!-- Search page button -->
+            <div class="circle two">
+                <a href="schedule.html"><img id="btn" src="img/calendar.png" alt="#"></a>
+            </div>
+            <!-- Profile page button -->
+            <div class="circle thr">
+                <a href="profile.html"><img id="btn" src="img/profile.png" alt="#"></a>
+            </div>
+            <!-- Light bulb page button -->
+            <div class="circle four">
+                <a href="tips.html"><img id="btn" src="img/light-bulb.png" alt="#"></a>
+            </div>
+            <!-- Translation page button -->
+            <div class="circle fiv">
+                <a href="translation_page.html"><img id="btn" src="img/language.png" alt="#"></a>
+            </div>
+            <div></div>
+        
+    </footer>
+    <script src="features.js"></script>
+    <script src="data_features.js"></script>
+</body>
+</html>

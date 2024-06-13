@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="allEventsStyle.css">
+    
+    <title>All Events</title>
+</head>
+<body>
+    <header class="banner top-banner">
+        <!-- Banner content here -->
+        <img src="/img/olympics.png" style="width:70px;height:70px;">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <img id="profileimg" src="/img/profile.png" alt="#">
+            <h1 id="userid">UserID</h1>
+            <div class="sideimg">
+                <img id="btn" src="/img/profile.png" alt="#"><a href="profile.html" id="profilenav">Profile</a>
+            </div>
+            <div class="sideimg">
+                <img id="btn" src="/img/settings.png" alt="#"><a href="settings.html" id="settingsnav">Settings</a>
+            </div>
+            <div class="sideimg">
+                <img id="btn" src="/img/information.png" alt="#"><a href="faq.html" id="faqnav">FAQ</a>
+            </div>
+            <!-- <a href="javascript:void(0)" class="subnav" onclick="toggleSubNav()">#</a>
+            <div id="subNavContent" class="subnav-content">
+                <a href="#">#</a>
+                <a href="#">#</a>
+                <a href="#">#</a>
+            </div> -->
+          </div>
+          <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="topleft">&#9776;</span>
+    </header>
+    <select name="language" id="languageSelector" style="display: none;">
+        <option value="en">English</option>
+        <option value="zh">中国語</option>
+        <option value="ja">日本語</option>
+        <option value="ko">한국어</option>
+    </select>
+    <main class="content">
+        <section>
+            <!-- Sort by alphabet  -->
+            <!-- Start with A -->
+            <ul class="event-table">
+
+                <li class="heading">
+                    <h1>A</h1>
+                    <button class="expansion-button" onclick="toggleAllListExpansion(this)">Show all</button>
+                </li>
+
+                <!-- A Event type (sport), contains multiple sub event -->
+                <!-- Acrobatic Gymnastics -->
+
+                <!-- Archery -->
+                <li class="event-list" id="Archery">
+
+                    <!-- Event image and event name, click the name will navigate to the event detail page (not implemented yet) -->
+                    <div class="event-list-content" onclick="toggleListExpansion(this.parentNode)">
+                        <img class="sport-icon" src="images/sports/Archery.svg" alt="Archery icon">
+                        <h4 id="archery">Archery</h4>
+                    </div>
+
+                    <!-- Sub event list, hidden by default-->
+                    <div class="expansion-container">
+                        <ul class="list-expansion">
+
+                            <!-- A sub evnt info -->
+                            <!-- <li class="list-expansion-content">
+                                <div class="list-expansion-content-event-info">
+                                        <h4>Team A Vs Team B</h4>
+                                        <p>Brisbane City Indoor Sports</p>
+                                        <p>7th July  3pm ~ 5pm</p>
+                                </div>
+                                <button class="add" onclick="addOrRemove(this)"></button>
+                            </li>
+
+                            <li class="separator">
+                                <hr>
+                            </li>
+
+                            <li class="list-expansion-content">
+                                <div class="list-expansion-content-event-info">
+                                        <h4>Team A Vs Team B</h4>
+                                        <p>Brisbane City Indoor Sports</p>
+                                        <p>7th July  3pm ~ 5pm</p>
+                                </div>
+                                <button class="add" onclick="addOrRemove(this)"></button>
+                            </li> -->
+
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- Artistic Gymnastics -->
+                <li class="event-list" id="ArtisticGymnastics">
+
+                    <!-- Event image and event name, click the name will navigate to the event detail page (not implemented yet) -->
+                    <div class="event-list-content" onclick="toggleListExpansion(this.parentNode)">
+                        <img class="sport-icon" src="images/sports/ArtisticGymnastics.svg" alt="Artistic Gymnastics icon">
+                        <h4 id="gymnastic">Artistic Gymnastics</h4>
+                    </div>
+
+                    <!-- Sub event list, hidden by default-->
+                    <div class="expansion-container">
+                        <ul class="list-expansion">
+
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- Artistic Swimming -->
+                <li class="event-list" id="ArtisticSwimming">
+
+                    <!-- Event image and event name, click the name will navigate to the event detail page (not implemented yet) -->
+                    <div class="event-list-content" onclick="toggleListExpansion(this.parentNode)">
+                        <img class="sport-icon" src="images/sports/ArtisticSwimming.svg" alt="Artistic Swimming icon">
+                        <h4 id="swimming">Artistic Swimming</h4>
+                    </div>
+
+                    <!-- Sub event list, hidden by default-->
+                    <div class="expansion-container">
+                        <ul class="list-expansion">
+
+                            <!-- A sub evnt info -->
+
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- Athletics -->
+                <li class="event-list" id="Athletics">
+
+                    <!-- Event image and event name, click the name will navigate to the event detail page (not implemented yet) -->
+                    <div class="event-list-content" onclick="toggleListExpansion(this.parentNode)">
+                        <img class="sport-icon" src="images/sports/Athletics.svg" alt="Athletics icon">
+                        <h4 id="athletic">Athletics</h4>
+                    </div>
+
+                    <!-- Sub event list, hidden by default-->
+                    <div class="expansion-container">
+                        <ul class="list-expansion">
+
+                            <!-- A sub evnt info -->
+
+                        </ul>
+                    </div>
+                </li>
+
+            </ul>
+            
+            <!-- Start with B -->
+            <ul class="event-table">
+
+                <li class="heading">
+                    <h1>B</h1>
+                    <button class="expansion-button" onclick="toggleAllListExpansion(this)">Show all</button>
+                </li>
+
+                <!-- Badminton -->
+                <li class="event-list" id="Badminton">
+
+                    <!-- Event image and event name, click the name will navigate to the event detail page (not implemented yet) -->
+                    <div class="event-list-content" onclick="toggleListExpansion(this.parentNode)">
+                        <img class="sport-icon" src="images/sports/Badminton.svg" alt="Badminton icon">
+                        <h4 id="badminton">Badminton</h4>
+                    </div>
+
+                    <!-- Sub event list, hidden by default-->
+                    <div class="expansion-container">
+                        <ul class="list-expansion">
+
+                            <!-- A sub evnt info -->
+
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- Baseball Softball -->
+                <li class="event-list" id="BaseballSoftball">
+
+                    <!-- Event image and event name, click the name will navigate to the event detail page (not implemented yet) -->
+                    <div class="event-list-content" onclick="toggleListExpansion(this.parentNode)">
+                        <img class="sport-icon" src="images/sports/BaseballSoftball.svg" alt="Baseball Softball icon">
+                        <h4 id="softball">Baseball Softball</h4>
+                    </div>
+
+                    <!-- Sub event list, hidden by default-->
+                    <div class="expansion-container">
+                        <ul class="list-expansion">
+
+                            <!-- A sub evnt info -->
+
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- Basketball -->
+                <li class="event-list" id="Basketball">
+
+                    <!-- Event image and event name, click the name will navigate to the event detail page (not implemented yet) -->
+                    <div class="event-list-content" onclick="toggleListExpansion(this.parentNode)">
+                        <img class="sport-icon" src="images/sports/Basketball.svg" alt="Basketball icon">
+                        <h4 id="basketball">Basketball</h4>
+                    </div>
+
+                    <!-- Sub event list, hidden by default-->
+                    <div class="expansion-container">
+                        <ul class="list-expansion">
+
+                            <!-- A sub evnt info -->
+
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- Beach Volleyball -->
+                <li class="event-list" id="BeachVolleyball">
+
+                    <!-- Event image and event name, click the name will navigate to the event detail page (not implemented yet) -->
+                    <div class="event-list-content" onclick="toggleListExpansion(this.parentNode)">
+                        <img class="sport-icon" src="images/sports/BeachVolleyball.svg" alt="Beach Volleyball icon">
+                        <h4 id="beach">Beach Volleyball</h4>
+                    </div>
+
+                    <!-- Sub event list, hidden by default-->
+                    <div class="expansion-container">
+                        <ul class="list-expansion">
+
+                            <!-- A sub evnt info -->
+
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- Boxing -->
+                <li class="event-list" id="Boxing">
+
+                    <!-- Event image and event name, click the name will navigate to the event detail page (not implemented yet) -->
+                    <div class="event-list-content" onclick="toggleListExpansion(this.parentNode)">
+                        <img class="sport-icon" src="images/sports/Boxing.svg" alt="Boxing icon">
+                        <h4 id="boxing">Boxing</h4>
+                    </div>
+
+                    <!-- Sub event list, hidden by default-->
+                    <div class="expansion-container">
+                        <ul class="list-expansion">
+
+                            <!-- A sub evnt info -->
+
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- Breaking -->
+                <li class="event-list" id="Breaking">
+
+                    <!-- Event image and event name, click the name will navigate to the event detail page (not implemented yet) -->
+                    <div class="event-list-content" onclick="toggleListExpansion(this.parentNode)">
+                        <img class="sport-icon" src="images/sports/Breaking.svg" alt="Breaking icon">
+                        <h4 id="bboy">Breaking</h4>
+                    </div>
+
+                    <!-- Sub event list, hidden by default-->
+                    <div class="expansion-container">
+                        <ul class="list-expansion">
+
+                            <!-- A sub evnt info -->
+
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+            <!-- Start with C -->
+            <ul class="event-table">
+
+                <li class="heading">
+                    <h1>C</h1>
+                    <button class="expansion-button" onclick="toggleAllListExpansion(this)">Show all</button>
+                </li>
+
+                <!-- Canoe Flatwater -->
+                <li class="event-list" id="CanoeFlatwater">
+
+                    <!-- Event image and event name, click the name will navigate to the event detail page (not implemented yet) -->
+                    <div class="event-list-content" onclick="toggleListExpansion(this.parentNode)">
+                        <img class="sport-icon" src="images/sports/CanoeFlatwater.svg" alt="Canoe Flatwater icon">
+                        <h4 id="canoef">Canoe Flatwater</h4>
+                    </div>
+
+                    <!-- Sub event list, hidden by default-->
+                    <div class="expansion-container">
+                        <ul class="list-expansion">
+
+                            <!-- A sub evnt info -->
+
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- Canoe Slalom -->
+                <li class="event-list" id="CanoeSlalom">
+
+                    <!-- Event image and event name, click the name will navigate to the event detail page (not implemented yet) -->
+                    <div class="event-list-content" onclick="toggleListExpansion(this.parentNode)">
+                        <img class="sport-icon" src="images/sports/CanoeSlalom.svg" alt="Canoe Slalom icon">
+                        <h4 id="canoes">Canoe Slalom</h4>
+                    </div>
+
+                    <!-- Sub event list, hidden by default-->
+                    <div class="expansion-container">
+                        <ul class="list-expansion">
+
+                            <!-- A sub evnt info -->
+
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- Cycling BMX Freestyle -->
+                <li class="event-list" id="CyclingBMXFreestyle">
+
+                    <!-- Event image and event name, click the name will navigate to the event detail page (not implemented yet) -->
+                    <div class="event-list-content" onclick="toggleListExpansion(this.parentNode)">
+                        <img class="sport-icon" src="images/sports/CyclingBMXFreestyle.svg" alt="Cycling BMX Freestyle icon">
+                        <h4 id="bmx">Cycling BMX Freestyle</h4>
+                    </div>
+
+                    <!-- Sub event list, hidden by default-->
+                    <div class="expansion-container">
+                        <ul class="list-expansion">
+
+                            <!-- A sub evnt info -->
+
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- Cycling BMX Racing -->
+                <li class="event-list" id="CyclingBMXRacing">
+
+                    <!-- Event image and event name, click the name will navigate to the event detail page (not implemented yet) -->
+                    <div class="event-list-content" onclick="toggleListExpansion(this.parentNode)">
+                        <img class="sport-icon" src="images/sports/CyclingBMXRacing.svg" alt="Cycling BMX Racing icon">
+                        <h4 id="bmxrace">Cycling BMX Racing</h4>
+                    </div>
+
+                    <!-- Sub event list, hidden by default-->
+                    <div class="expansion-container">
+                        <ul class="list-expansion">
+
+                            <!-- A sub evnt info -->
+
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- Cycling Mountain Bike -->
+                <li class="event-list" id="CyclingMountainBike">
+
+                    <!-- Event image and event name, click the name will navigate to the event detail page (not implemented yet) -->
+                    <div class="event-list-content" onclick="toggleListExpansion(this.parentNode)">
+                        <img class="sport-icon" src="images/sports/CyclingMountainBike.svg" alt="Cycling Mountain Bike icon">
+                        <h4 id="mountainbike">Cycling Mountain Bike</h4>
+                    </div>
+
+                    <!-- Sub event list, hidden by default-->
+                    <div class="expansion-container">
+                        <ul class="list-expansion">
+
+                            <!-- A sub evnt info -->
+
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- Cycling Road -->
+                <li class="event-list" id="CyclingRoad">
+
+                    <!-- Event image and event name, click the name will navigate to the event detail page (not implemented yet) -->
+                    <div class="event-list-content" onclick="toggleListExpansion(this.parentNode)">
+                        <img class="sport-icon" src="images/sports/CyclingRoad.svg" alt="Cycling Road icon">
+                        <h4 id="road">Cycling Road</h4>
+                    </div>
+
+                    <!-- Sub event list, hidden by default-->
+                    <div class="expansion-container">
+                        <ul class="list-expansion">
+
+                            <!-- A sub evnt info -->
+
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- Cycling Track  -->
+                <li class="event-list" id="CyclingTrack">
+
+                    <!-- Event image and event name, click the name will navigate to the event detail page (not implemented yet) -->
+                    <div class="event-list-content" onclick="toggleListExpansion(this.parentNode)">
+                        <img class="sport-icon" src="images/sports/CyclingTrack.svg" alt="Cycling Track icon">
+                        <h4 id="track">Cycling Track</h4>
+                    </div>
+
+                    <!-- Sub event list, hidden by default-->
+                    <div class="expansion-container">
+                        <ul class="list-expansion">
+
+                            <!-- A sub evnt info -->
+
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="banner bottom-banner">
+        <!-- Bottom banner content here -->
+            <div></div>
+            <!-- Home page button -->
+            <div class="circle">
+                <a href="index.html"><img id="btn" src="/img/home.png" alt="#"></a>
+            </div>
+            <!-- Search page button -->
+            <div class="circle two">
+                <a href="schedule.html"><img id="btn" src="/img/calendar.png" alt="#"></a>
+            </div>
+            <!-- Profile page button -->
+            <div class="circle thr">
+                <a href="login.html"><img id="btn" src="/img/profile.png" alt="#"></a>
+            </div>
+            <!-- Light bulb page button -->
+            <div class="circle four">
+                <a href="tips.html"><img id="btn" src="/img/light-bulb.png" alt="#"></a>
+            </div>
+            <!-- Translation page button -->
+            <div class="circle fiv">
+                <a href="translation_page.html"><img id="btn" src="/img/language.png" alt="#"></a>
+            </div>
+            <div></div>
+    </footer>
+    <script src="features.js"></script>
+    <script src="allEvents.js"></script>
+    <script src="data_features.js"></script>
+</body>
+</html>

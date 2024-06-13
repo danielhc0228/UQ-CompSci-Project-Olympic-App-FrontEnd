@@ -1,0 +1,6 @@
+{
+    "name": "recommended",
+    "version": "1.0.0",
+    "type": "module",
+    "main": "recommendedPrompts.js"
+}

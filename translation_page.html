@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="eventCardStyle.css">
+    
+    <title>Translation Page</title>
+</head>
+<body>
+    <header class="banner top-banner">
+        <!-- Banner content here -->
+        <img src="img/olympics.png" style="width:70px;height:70px;">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <img id="profileimg" src="/img/profile.png" alt="#">
+            <h1 id="userid">UserID</h1>
+            <div class="sideimg">
+                <img id="btn" src="img/profile.png" alt="#"><a href="profile.html" id="profilenav">Profile</a>
+            </div>
+            <div class="sideimg">
+                <img id="btn" src="img/settings.png" alt="#"><a href="settings.html" id="settingsnav">Settings</a>
+            </div>
+            <div class="sideimg">
+                <img id="btn" src="img/information.png" alt="#"><a href="faq.html" id="faqnav">FAQ</a>
+            </div>
+            <!-- <a href="javascript:void(0)" class="subnav" onclick="toggleSubNav()">#</a>
+            <div id="subNavContent" class="subnav-content">
+                <a href="#">#</a>
+                <a href="#">#</a>
+                <a href="#">#</a>
+            </div> -->
+          </div>
+          <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="topleft">&#9776;</span>
+    </header>
+    <main class="content">
+        <select name="language" id="languageSelector" style="display: none;">
+            <option value="en">English</option>
+            <option value="zh">中国語</option>
+            <option value="ja">日本語</option>
+            <option value="ko">한국어</option>
+        </select>
+        <div class="translator-container">
+            <div class="language-selectors">
+                <select id="source-language">
+                    <!-- Add more language options here -->
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                    <option value="zh-CN">中文（简体）</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="ru">Русский</option>
+                    <option value="ar">العربية</option>
+                    <option value="pt">Português</option>
+                    <option value="it">Italiano</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="sv">Svenska</option>
+                    <option value="no">Norsk</option>
+                    <option value="da">Dansk</option>
+                    <option value="fi">Suomi</option>
+                    <option value="el">Ελληνικά</option>
+                    <option value="tr">Türkçe</option>
+                    <option value="hi">हिन्दी</option>
+                    <option value="bn">বাঙালি</option>
+                    <option value="ar">العربية</option>
+                    <option value="he">עִבְרִית</option>
+                    <option value="th">ไทย</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="fil">Filipino</option>
+                    <option value="sw">Kiswahili</option>
+                </select>
+                <select id="target-language">
+                    <!-- Add more language options here -->
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                    <option value="zh-CN">中文（简体）</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="ru">Русский</option>
+                    <option value="ar">العربية</option>
+                    <option value="pt">Português</option>
+                    <option value="it">Italiano</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="sv">Svenska</option>
+                    <option value="no">Norsk</option>
+                    <option value="da">Dansk</option>
+                    <option value="fi">Suomi</option>
+                    <option value="el">Ελληνικά</option>
+                    <option value="tr">Türkçe</option>
+                    <option value="hi">हिन्दी</option>
+                    <option value="bn">বাঙালি</option>
+                    <option value="ar">العربية</option>
+                    <option value="he">עִבְרִית</option>
+                    <option value="th">ไทย</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="fil">Filipino</option>
+                    <option value="sw">Kiswahili</option>
+                </select>
+            </div>
+            <div class="text-areas">
+                <textarea class="speech-input1" lang="en" id="input-text" placeholder="Enter or speak to translate"></textarea>
+                <!-- <input type="text" class="speech-input" lang="es" data-ready="Habla ahora"> -->
+                <textarea id="output-text" placeholder="Translation will appear here" readonly></textarea>
+
+                <!-- Recommeneded prompts button -->
+                <!-- <button id="test1">test1</button>
+                <button id="test2">test2</button>
+                <button id="test3">test3</button> -->
+            </div>
+            <div class="button-areas">
+                <button id="translateButton">Translate</button>
+                
+                <div class="circle one">
+                    <img src="img/microphone.png" id="mic"></button>
+                    <!-- <button class="si-btn">si-btn</button> -->
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="banner bottom-banner">
+        <!-- Bottom banner content here -->
+            <div></div>
+            <!-- Home page button -->
+            <div class="circle one">
+                <a href="index.html"><img id="btn" src="img/home.png" alt="#"></a>
+            </div>
+            <!-- Search page button -->
+            <div class="circle two">
+                <a href="schedule.html"><img id="btn" src="img/calendar.png" alt="#"></a>
+            </div>
+            <!-- Profile page button -->
+            <div class="circle thr">
+                <a href="profile.html"><img id="btn" src="img/profile.png" alt="#"></a>
+            </div>
+            <!-- Light bulb page button -->
+            <div class="circle four">
+                <a href="tips.html"><img id="btn" src="img/light-bulb.png" alt="#"></a>
+            </div>
+            <!-- Translation page button -->
+            <div class="circle fiv">
+                <a href="translation_page.html"><img id="btn" src="img/language.png" alt="#"></a>
+            </div>
+            <div></div>
+        
+    </footer>
+    <script src="bundle.js"></script>
+    <script src="features.js"></script>
+    <script src="speech-input.js"></script>
+    <script src="data_features.js"></script>
+</body>
+</html>

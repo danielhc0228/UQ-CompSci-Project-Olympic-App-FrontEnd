@@ -1,0 +1,76 @@
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+    flex: 1; /* Allow the content to take up the available space */
+}
+
+.separator {
+    margin: 10px;
+}
+
+.today {
+    font-size: xx-large;
+    font-style: italic;
+    color: red;
+}
+
+.edit {
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 7px 12px 7px 12px;
+    border-radius: 0px 0px 5px 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.editing {
+    padding-top: 20px;
+}
+
+.checkbox {
+    display: none;
+}
+
+#select-bar {
+    position: fixed;
+    display: none;
+    justify-content: space-between;
+    left: 0px;
+    z-index: 101;
+}
+
+#select-bar button {
+    margin: 0px 20px 0px 20px;
+    height: 40px;
+    font-size: large;
+    cursor: pointer;
+}
+
+#selectAll {
+    background-color: #fff;
+    border: none;
+    font-size: large;
+    /* font-weight: bold; */
+}
+
+#remove {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#remove:active {
+    background-color: rgba(255, 0, 0, 0.595);
+}
